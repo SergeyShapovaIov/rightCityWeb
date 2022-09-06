@@ -1,6 +1,7 @@
 package com.example.rightCityWeb.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -12,9 +13,7 @@ public class MainController {
     }
 
     @GetMapping("/main")
-    public String mainPage() {
-        ModelAndView model = new ModelAndView("main");
-        /// model.addAttribute("variableName", "someValue");
+    public String mainPage(Model model) {
 
         return "main";
     }
